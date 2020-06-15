@@ -8,12 +8,12 @@ function Panels(props) {
     <div className="panel-container">
       <div className="col-sm-6">
         <Form>
-          <Form.Control rows="30" as="textarea" className="text-muted" />
+          <Form.Control rows="10" as="textarea" className="text-muted" />
         </Form>
       </div>
       <div className="col-sm-6">
         <Form>
-          <Form.Control rows="30" as="textarea" className="text-muted" />
+          <Form.Control rows="10" as="textarea" className="text-muted" />
         </Form>
       </div>
     </div>

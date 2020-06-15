@@ -1,0 +1,9 @@
+.diff-panel-container {
+  min-height: 300px;
+  display: flex;
+
+  .diff-panel {
+    background-color: lightblue;
+    min-height: 300px;
+  }
+}
