@@ -8,12 +8,12 @@ function Panels(props) {
     <div className="panel-container">
       <div className="col-sm-6">
         <Form>
-          <Form.Control rows="10" as="textarea" className="text-muted" />
+          <Form.Control rows="10" as="textarea" className="text-muted" onChange={(e) => props.updateValue('old', e)}  />
         </Form>
       </div>
       <div className="col-sm-6">
         <Form>
-          <Form.Control rows="10" as="textarea" className="text-muted" />
+          <Form.Control rows="10" as="textarea" className="text-muted" onChange={(e) => props.updateValue('new', e)}  />
         </Form>
       </div>
     </div>
@@ -21,11 +21,15 @@ function Panels(props) {
 }
 
 Panels.propTypes = {
-  activeHeaderClass: PropTypes.bool
+  activeHeaderClass: PropTypes.bool,
+  updateOldValue: PropTypes.func,
+  updateNewValue: PropTypes.func
 };
 
 Panels.defaultProps = {
-  activeHeaderClass: false
+  activeHeaderClass: false,
+  updateOldValue: () => {},
+  updateNewValue: () => {}
 };
 
 export default Panels;
